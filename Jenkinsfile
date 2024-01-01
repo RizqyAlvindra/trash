@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-                    docker compose down
+                    docker compose down backend
                     cd ${directory}
                     git pull origin ${branch}
                     exit
