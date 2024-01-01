@@ -32,7 +32,7 @@ pipeline{
             steps{
                 sshagent([secret]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-                    docker-compose up -d
+                    docker compose up -d
                     exit
                     EOF"""
                 }
