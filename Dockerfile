@@ -6,9 +6,9 @@ COPY . .
 
 RUN npm install
 
-RUN npm install sequelize-cli -g
+#RUN npm install sequelize-cli -g
 
-RUN sequelize-cli db:migrate
+#RUN sequelize-cli db:migrate
 
 EXPOSE 5000 
 
